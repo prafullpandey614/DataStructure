@@ -2,9 +2,9 @@ class Solution {
 public:
    static bool sortt(vector<int>&a,vector<int>&b){
        if(a[0]!=b[0]){
-           return (a[0]>b[0]);
+           return (a[0]>b[0]); // sorting according to first element
        }
-        return a[1]<b[1];
+        return a[1]<b[1]; //sorting according to second element
     }
     int numberOfWeakCharacters(vector<vector<int>>& p) {
         
