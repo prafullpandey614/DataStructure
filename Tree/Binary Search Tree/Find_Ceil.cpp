@@ -3,6 +3,7 @@ void rec(Node*root,int d,int &c){
         c = root->data ;
         return ;
     }
+    
     if(root->data<d){
         if(root->right)
         rec(root->right,d,c);
