@@ -1,3 +1,12 @@
+//{ Driver Code Starts
+//Initial Template for C++
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+//User function Template for C++
 
 #include <bits/stdc++.h> 
 
@@ -54,3 +63,46 @@ class Trie{
     }
 };
 
+
+class Solution
+{
+public:
+    string longestString(vector<string> &words)
+    {
+        // code here
+        Trie*obj = new Trie();
+        for(auto x:words) obj->insert(x);
+        string longest= "";
+        for(int i = 0 ; i < words.size(); ++i){
+            if(obj->allPrefExist(words[i])){
+                if(words[i].length()>longest.length()) longest = words[i];
+                else if(words[i].length()==longest.length()) longest=  min(longest,words[i]);
+            }
+        }
+        return longest ;
+    }
+};
+
+//{ Driver Code Starts.
+
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        vector<string> v(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> v[i];
+        }
+        Solution obj;
+        string w = obj.longestString(v);
+        cout << w << "\n";
+    }
+    return 0;
+}
+
+// } Driver Code Ends
