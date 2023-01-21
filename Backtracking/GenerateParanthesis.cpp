@@ -3,6 +3,7 @@ public:
     vector<string>v;
     void generate(string &s,int l,int r){
         if(l==0 && r==0){
+            
             v.push_back(s);
             return;
             
