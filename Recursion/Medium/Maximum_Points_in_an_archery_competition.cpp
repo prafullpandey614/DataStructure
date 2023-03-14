@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //prerequisites Recursion + Observation --> look carefully the Question
     int alice = 0 ;
     vector<int>ans ;
     bool flag = 0 ;
