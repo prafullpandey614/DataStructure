@@ -1,25 +1,31 @@
 class Solution {
 public:
+    int dp[201][201];
     int solve(int i,int j,vector<vector<int>>&grid){
         
-        n = grid.size();
-        m = grid[0].size();
+        int n = grid.size();
+        int  m = grid[0].size();
         if(i==n-1 and j==m-1){
             return grid[i][j];
         }
-        if(i<0 or j<0 or i>=n or i>=m){
+       
+        if(i<0 or j<0 or i>=n or j>=m){
             return INT_MAX ;
         }   
-
+        if(dp[i][j]!=-1) return dp[i][j];
         int op1 = solve(i+1,j,grid);        
         int op2 = solve(i,j+1,grid);        
-
-        return grid[i][j] + min(op1,op2);
+        if(op1==INT_MAX and op2==INT_MAX){
+            return INT_MAX ;
+        }
+        return dp[i][j] =  grid[i][j] + min(op1,op2);
 
     }
     int minPathSum(vector<vector<int>>& grid) {
 
-
+     memset(dp,-1,sizeof dp);
+        
+     return solve(0,0,grid);
 
 
 
