@@ -8,6 +8,8 @@ int countDistinctSubstring(string s);
 int main()
 {
  int t,l,i,j;
+
+ 
  int temp;
     cin>>t;
  while(t--){
