@@ -49,11 +49,13 @@ public class TestClass {
    return str; 
   } 
  } 
- 
+
+
  public static void main(String[] sadf) { 
   FastReader fr = new FastReader(); 
   int tx = fr.nextInt(); 
   while (tx-- > 0) { 
+
 	  
    solve(fr); 
   } 
