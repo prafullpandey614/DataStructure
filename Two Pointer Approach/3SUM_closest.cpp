@@ -5,6 +5,7 @@ public:
         int ans  = 0;
         int curr = 0;
         int diff= INT_MAX;
+        //revised
         for(int i = 0; i< v.size()-2;++i){
             int j =  i+1 ; int k  = v.size()-1;
             while(j<k){
