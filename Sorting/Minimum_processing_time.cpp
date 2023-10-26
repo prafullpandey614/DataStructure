@@ -3,10 +3,7 @@ public:
     int minProcessingTime(vector<int>& p, vector<int>& tasks) {
         sort(tasks.begin(),tasks.end()) ;
         sort(p.begin(),p.end(),greater<int>());
-        // for(int x:p) cout<<x<<" ";
-        // cout<<endl;
-        // for(int x:tasks) cout<<x<<" ";
-        // cout<<endl;
+   
         
         int i = 3 ;
         int ans = 0 ;
